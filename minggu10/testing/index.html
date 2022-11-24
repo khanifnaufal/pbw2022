@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://kit.fontawesome.com/7d6bae62ae.js" crossorigin="anonymous"></script>
+    <title>Bikin Web</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <a id="Home">Home</a>
+            <a id="About">About</a>
+        </nav>
+        <div class="search">
+            <input class="search-txt" type="text" name="" placeholder="type to search">
+            <a class="search-btn" href="#">
+            <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <a onclick="myfunction()">Dark mode</a>
+        
+    </div>
+
+    <script>
+        function myfunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+
+</html>
