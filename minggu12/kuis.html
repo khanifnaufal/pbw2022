@@ -11,8 +11,8 @@
 <body>
     <h2>Data Mahasiswa PBW 2022</h2>
     <form method="POST" action="javascript:void(0);" id="form">
-        <input type="text" placeholder="Input Nama MHS" id="tambahNama" required>
-        <input type="submit" value="+">
+        <input type="text" placeholder="Input Nama MHS" name="Nama" required>
+        <input type="button"onclick="addNama()" value="+">
     </form>
     <div id="counter">
         <!-- data dinamis dari javascript-->
@@ -31,42 +31,45 @@
         </tbody>
     </table>
     <script>
-
-        const formInput = document.getElementById("form");
-        let arrData = []
-
-        function loadData() {
-            var tbl = document.getElementById("mhs")
-            tbl.innerHTML = ""
-            var data = ""
-            
-            for (let i = 0; i < arrData.length; i++) {
-                data += '<tr id="i">';
-                data += '<td>' + arrData[i] + '</td>';
-                data += '<td>' + '<button onclick="remove('+ i +')">-</button>' + '<button onclick="edit('+ i +')">edit</button>'+ '</td>';
-                data += '</tr>';
-            }
-            tbl.innerHTML += data
-        }
+        var dataNama = [
+            "Budi",
+            "Peni",
+            "Jono"
+        ];
 
 
-        formInput.addEventListener("submit", () => {
-            const name = document.getElementById("tambahNama").value;
-            arrData.push(name)
-            const clearForm = document.getElementById("tambahNama").value = "";
-            loadData()
-        })
-        function remove(index) {
-            for (let i = 0; i < arrData.length; i++) {
-                if (index == i) {
-                    const delConfirm = confirm("Do you want to delete this item?")
-                    if (delConfirm) {
-                        arrData.splice(index, 1)
-                    }
-                }
-                loadData()
+        function showNama() {
+            var listNama = document.getElementById("mhs");
+            // clear list barang 
+            listNama.innerHTML = "";
+
+            // cetak semua barang 
+            for (let i = 0; i < dataNama.length; i++) {
+                var btnEdit = "<a href='#' onclick='editNama(" + i + ")'>Edit</a>";
+                var btnHapus = "<a href='#' onclick = 'deleteNama(" + i + ")' > Hapus</a > ";
+
+                listNama.innerHTML += "<li>" + dataNama[i] + " [" + btnEdit + " |  " + btnHapus + "]</li > ";
             }
         }
+
+        function addNama() {
+            var input = document.querySelector("input[name=Nama]");
+            dataNama.push(input.value);
+            showNama();
+        }
+
+        function editNama(id) {
+            var newNama = prompt("Nama baru", dataNama[id]);
+            dataNama[id] = newNama;
+            showNama();
+        }
+
+        function deleteNama(id) {
+            dataNama.splice(id, 1);
+            showNama();
+        }
+
+        showNama();
 
 
 
