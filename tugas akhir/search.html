@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/style-search.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+        
+    <title>Forev | Search</title>
+
+</head>
+
+<body>
+    <div class="navbar">
+
+        <div class="logo">
+            <h1>FO<span>REV<i class="fas fa-star"></i></span></h1>
+        </div>
+
+        <div class="icon-bar">
+            <a href="index.html">
+                <i class="fas fa-home"></i>
+                <div class="menu-items">
+                    Beranda
+                </div>
+            </a>
+            <a href="tentang.html">
+                <i class="fas fa-info"></i>
+                <div class="menu-items">
+                    Tentang
+                </div>
+            </a>
+            <a href="makanan.html">
+                <i class="fas fa-hamburger"></i>
+                <div class="menu-items">
+                    Makanan
+                </div>
+            </a>
+            <a href="minuman.html">
+                <i class="fas fa-wine-glass"></i>
+                <div class="menu-items">
+                    Minuman
+                </div>
+            </a>
+            <a href="review.html">
+                <i class="fas fa-star"></i>
+                <div class="menu-items">
+                    Kata Reviewer
+                </div>
+            </a>
+            <a href="search.html">
+                <i class="fas fa-search"></i>
+                <div class="menu-items">
+                    Search
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+    <section>
+        <div class="main">
+            <div class="Description">
+                <h2> Mesin Pencari Food Review</h2>
+                <p>Anda bisa mencari Food review dengan mengetik kata kunci yang akan anda search.
+                    Lalu anda langsung diarahkan ke laman youtube.
+                </p>
+            </div>
+            <div class="searchBox">
+                <input type="text" name="" class="query" placeholder="Search Makanan atau Minuman">
+                <div class="tmblsearch">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="button">
+                    <button class="searchBtn">Search</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+    <script>
+        let query = document.querySelector(".query");
+        let button = document.querySelector(".button");
+
+        button.onclick = function () {
+            let url = "https://www.youtube.com/results?search_query=" + query.value;
+            window.open(url, '_self');
+        }
+    </script>
+    <div class="footer">
+        <p>Copyright @ 2022 Muhammad Khanif Naufal. All Rights Reserved</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/style-makanan.css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+        integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+        crossorigin="anonymous"></script>
+    <title>Forev | Makanan</title>
+</head>
+
+<body>
+    <div class="navbar">
+
+        <div class="logo">
+            <h1>FO<span>REV<i class="fas fa-star"></i></span></h1>
+        </div>
+
+        <div class="icon-bar">
+            <a href="index.html">
+                <i class="fas fa-home"></i>
+                <div class="menu-items">
+                    Beranda
+                </div>
+            </a>
+            <a href="tentang.html">
+                <i class="fas fa-info"></i>
+                <div class="menu-items">
+                    Tentang
+                </div>
+            </a>
+            <a href="makanan.html">
+                <i class="fas fa-hamburger"></i>
+                <div class="menu-items">
+                    Makanan
+                </div>
+            </a>
+            <a href="minuman.html">
+                <i class="fas fa-wine-glass"></i>
+                <div class="menu-items">
+                    Minuman
+                </div>
+            </a>
+            <a href="review.html">
+                <i class="fas fa-star"></i>
+                <div class="menu-items">
+                    Kata Reviewer
+                </div>
+            </a>
+            <a href="search.html">
+                <i class="fas fa-search"></i>
+                <div class="menu-items">
+                    Search
+                </div>
+            </a>
+
+        </div>
+        <div class="dm">
+            <a onclick="myFunction()">
+                <i class="fas fa-moon"></i>
+                <div class="darkmode">
+                    Darkmode
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="msg-container">
+        <div id="slider">
+            <div class="msg-col">
+                <h1>Rendang</h1>
+                <p>Rendang atau randang dalam bahasa Minangkabau adalah Masakan Minangkabau yang berbahan dasar daging
+                    yang berasal dari Sumatra Barat, Indonesia. Masakan merupakan olahan daging atau telur yang dimasak
+                    dalam suhu rendah dalam waktu lama dengan menggunakan aneka rempah-rempah dan santan.</p>
+            </div>
+            <img src="../assets/rendang.png" width="360" height="360" />
+            <div class="msg-col">
+                <h1>Nasi Goreng</h1>
+                <p>Nasi goreng adalah makanan berupa nasi yang digoreng dan dicampur dalam minyak goreng, margarin atau
+                    mentega. Biasanya ditambah kecap manis, bawang merah, bawang putih, asam jawa, lada dan bahan
+                    lainnya; seperti telur, daging ayam, dan kerupuk.</p>
+            </div>
+            <img src="../assets/nasigoreng.png" width="360" height="360" />
+            <div class="msg-col">
+                <h1>Sate</h1>
+                <p>Sate atau satai adalah makanan yang terbuat dari daging yang dipotong kecil-kecil dan ditusuk
+                    sedemikian rupa dengan tusukan lidi tulang daun kelapa atau bambu, kemudian dipanggang menggunakan
+                    bara arang kayu. Sate disajikan dengan berbagai macam bumbu yang bergantung pada variasi resep sate.
+                </p>
+            </div>
+            <img src="../assets/sate.png" width="360" height="360" />
+        </div>
+    </div>
+    <div class="controller">
+        <div id="line1"></div>
+        <div id="line2"></div>
+        <div id="line3"></div>
+        <div id="active"></div>
+    </div>
+    <script>
+        var slider = document.getElementById('slider');
+        var active = document.getElementById('active');
+        var line1 = document.getElementById('line1');
+        var line2 = document.getElementById('line2');
+        var line3 = document.getElementById('line3');
+
+        line1.onclick = function () {
+            slider.style.transform = 'translateX(0)';
+            active.style.top = '0px';
+        }
+        line2.onclick = function () {
+            slider.style.transform = 'translateX(-33%)';
+            active.style.top = '80px';
+        }
+        line3.onclick = function () {
+            slider.style.transform = 'translateX(-66.66%)';
+            active.style.top = '160px';
+        }
+    </script>
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+    <div class="footer">
+        <p>Copyright @ 2022 Muhammad Khanif Naufal. All Rights Reserved</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+html {
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #ffffff;
+    color: #2f3542;
+    box-sizing: border-box;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #ffa502;
+
+}
+
+.logo {
+    text-align: center;
+    position: absolute;
+    color: #ffa502;
+    font-family: 'Noto Serif JP', sans-serif;
+    font-size: 50px;
+}
+
+.logo span {
+    color: #ff6348;
+}
+
+.navbar .logo {
+    font-size: 20px;
+    font-weight: 900px;
+    margin: 0 20px;
+    color: #2f3542;
+}
+
+.icon-bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-bar a {
+    text-align: center;
+    padding: 20px 30px;
+    font-size: 25px;
+    text-decoration: none;
+    color: #dfe4ea;
+}
+
+.menu-items {
+    font-size: large;
+    color: #2f3542;
+    padding-top: 5px;
+}
+
+.icon-bar a:hover {
+    background-color: #ff6348;
+    color: #2f3542;
+    border-radius: 25px 25px 25px 25px;
+}
+
+.darkmode {
+    font-size: large;
+    color: #2f3542;
+    padding-top: 5px;
+}
+
+.dm a {
+    text-align: center;
+    padding: 5px 15px;
+    font-size: 25px;
+    text-decoration: none;
+    color: #dfe4ea;
+}
+
+.dm {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dm a:hover {
+    background-color: #ff6348;
+    color: #2f3542;
+    border-radius: 15px 10px 15px 10px;
+}
+
+.dark-mode {
+    background-color: #2d3436;
+    color: aliceblue;
+}
+
+.dark-mode .footer {
+    color: #dfe4ea;
+}
+
+.dark-mode .content-utama p {
+    color: #dfe4ea;
+}
+
+.utama {
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 64%;
+    transform: translate(-50%, -50%);
+
+}
+
+.utama h1 {
+    color: #2f3542;
+    text-align: left;
+    font-family: 'Noto Serif JP', sans-serif;
+    font-size: 50px;
+}
+
+.utama span {
+    color: #ff6348;
+}
+
+.content-utama {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    top: 62%;
+    left: 65%;
+}
+
+.content-utama p {
+    color: #2f3542;
+    font-family: 'Noto Serif JP', sans-serif;
+    font-size: 16px;
+    text-align: left;
+}
+
+.mieayam {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    text-align: -webkit-right;
+    background-color: #ff6348;
+    border-radius: 50px;
+}
+
+.kata .utama {
+    background-color: #ffa502;
+    padding: 13px;
+    border-radius: 20px;
+}
+
+.footer {
+    background-color: #ffa502;
+    color: #2f3542;
+    margin-top: 15px;
+    bottom: 0;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+}
